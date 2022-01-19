@@ -1,0 +1,35 @@
+import java.util.*;
+public class ReverseSubString {
+
+	static StringBuffer buff = new StringBuffer();
+	static StringBuffer buf = new StringBuffer();
+	public static String reverseSubString(String str, int index, int len)
+	{
+		int n = str.length()-1;
+		char ch, ch1;		
+		for(int i=n;i>=0;i--)        // Reverse the given String
+		{
+			ch= str.charAt(i);
+			buff.append(ch);
+		}
+		for(int i=index; i<index+len; i++)    //trimming string with index and length
+		{
+			ch1 = buff.charAt(i);
+			buf.append(ch1);
+		}
+		System.out.println(buf);
+			return str;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+			Scanner scan = new Scanner(System.in);
+			String name=scan.next();
+			int sind = scan.nextInt();
+			int ln = scan.nextInt();
+			reverseSubString(name,sind,ln);    // calling method of reverse string
+			
+			
+	}
+
+}

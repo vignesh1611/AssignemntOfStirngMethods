@@ -1,0 +1,28 @@
+import java.util.*;
+public class getMidchars {
+
+	static StringBuffer buff = new StringBuffer();
+	public static String getMiddleChars(String name)
+	{
+		int len = name.length();
+		int x = (len/2)-1;
+		char ch;
+		if(len%2==0)                       // checking the length of sting is even
+			for(int i=x; i<len-x; i++)     // trimming  the middle char in string
+			{
+				ch = name.charAt(i);
+				buff.append(ch);
+			}
+		    System.out.println(buff);
+		return name;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
+		String str = scan.next();
+		getMiddleChars(str);                 // calling getMiddleChars method
+		
+	}
+
+}

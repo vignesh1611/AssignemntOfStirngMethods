@@ -1,0 +1,25 @@
+import java.util.*;
+public class StringReplica {
+
+	public static String repeatString(String name, int num)
+	{
+		
+		for(int i=0;i<num;i++)
+		{
+			System.out.print(name);
+		}
+		
+		return name;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the string and number");
+		String name = scan.next();
+		int num = scan.nextInt();
+		repeatString(name,num);
+		
+	}
+
+}

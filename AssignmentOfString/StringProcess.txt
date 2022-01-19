@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class StringProcess {
+	static String combo;
+	static String value1;
+	static String value2;
+
+	public static String getCombo(String name1, String name2) {
+		int len1 = name1.length();
+		int len2 = name2.length();
+
+		if(len1 <=100 && len2<=100) {
+		if (len1 > len2) {                         // checking which string is long 
+			value1 = name1;
+			value2 = name2;
+		} else {
+			value1 = name2;
+			value2 = name1;
+		}
+		combo = value1 + value2 + value1;
+		System.out.println(combo);
+		}
+		return combo;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		String str1 = scan.next();
+		String str2 = scan.next();
+
+		getCombo(str1, str2);                        // calling getcombo method
+	}
+
+}

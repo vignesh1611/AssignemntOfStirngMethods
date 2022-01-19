@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class StringProcessing {
+
+	static StringBuffer buff = new StringBuffer();
+	static StringBuffer buff1 = new StringBuffer();
+
+	public static String moveX(String str) {
+		char ch;
+		String fstr;
+		for (int i = 0; i < str.length(); i++) {
+			ch = str.charAt(i);
+			if (ch == 'x') {                        // checking for a char 'x'
+				buff.append(ch);
+			} else
+				buff1.append(ch);
+
+		}
+		fstr = buff1 + "" + buff;    // combining modified string
+
+		System.out.println(fstr);
+
+		return fstr;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		String str = scan.next();
+		moveX(str);                    // calling moveX method
+	}
+
+}

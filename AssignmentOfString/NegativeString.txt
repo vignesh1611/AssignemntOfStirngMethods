@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class NegativeString {
+
+	public static String negativeString(String str) {
+		String replace = str.replaceAll(" is ", " is not "); // replaceAll keyword for replacing word
+		System.out.println(replace);
+		return str;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		String str = scan.nextLine(); // nextLine is for reading a sentence as a input
+		negativeString(str);          // calling negativeString method
+	}
+
+}
